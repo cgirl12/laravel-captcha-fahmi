@@ -1,30 +1,15 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use Illuminate\Support\Facades\Storage;
 use Illuminate\Http\Request;
-use Illuminate\View\View;
 use SimpleSoftwareIO\QrCode\Facades\QrCode;
 
 class QRCodeController extends Controller
 {
     public function index()
     {
-        return view('welcome');
-    }
-
-    public function generateQrCode(Request $request)
-    {
-        $text = $request->input('qr-code'); 
-        $size = $request->input('qr-size', 100); 
-    
-        // Generate QR Code
-        $qrCode = QrCode::size($size)->generate($text);
-    
-        return back()->with([
-            'qr-code' => $qrCode,
-            'text' => $text,
-            'qr-size' => $size,
-        ]);
+        $qrCode = QrCode::size(200)->generate('https://www.tutsmake.com');
+        return view('home.index', compact('qrCode'));
     }
 }
