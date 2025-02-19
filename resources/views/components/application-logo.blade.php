@@ -1,6 +1,7 @@
 <style>
     img {
-        width: 150px;
+        width: 80px;
+        border-radius: 50%;
     }
 </style>
 

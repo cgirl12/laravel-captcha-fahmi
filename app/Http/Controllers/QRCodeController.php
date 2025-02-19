@@ -1,7 +1,6 @@
 <?php
 
 namespace App\Http\Controllers;
-
 use Illuminate\Http\Request;
 use Illuminate\View\View;
 use SimpleSoftwareIO\QrCode\Facades\QrCode;
@@ -23,6 +22,4 @@ class QRCodeController extends Controller
             'size' => $size,
         ]);
     }
-    
-    
 }

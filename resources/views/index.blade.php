@@ -1,229 +1,175 @@
 <!DOCTYPE html>
-<html lang="en">
+<html data-bs-theme="light" lang="en-US" dir="ltr">
 
-<head>
-  <meta charset="utf-8">
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>QR Code Generator</title>
-  <meta name="description" content="">
-  <meta name="keywords" content="">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <!-- Favicons -->
-  <link href="assets/img/favicon.png" rel="icon">
-  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+    <!-- ===============================================--><!--    Document Title--><!-- ===============================================-->
+    <title>brainwaveio | Landing Page Template</title>
 
-  <!-- Fonts -->
-  <link href="https://fonts.googleapis.com" rel="preconnect">
-  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <!-- ===============================================--><!--    Favicons--><!-- ===============================================-->
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/img/favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicons/favicon-16x16.png">
+    <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicons/favicon.ico">
+    <link rel="manifest" href="assets/img/favicons/manifest.json">
+    <meta name="msapplication-TileImage" content="assets/img/favicons/mstile-150x150.png">
+    <meta name="theme-color" content="#ffffff">
 
-  <!-- Vendor CSS Files -->
-  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
-  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+    <!-- ===============================================--><!--    Stylesheets--><!-- ===============================================-->
+    <link rel="stylesheet" href="vendors/swiper/swiper-bundle.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&amp;family=Rubik:ital,wght@0,300..900;1,300..900family=Rubik:ital,wght@0,300..900;1,300..900&amp;display=swap" rel="stylesheet">
+    <link href="assets/css/theme.min.css" rel="stylesheet" id="style-default">
+    <link href="assets/css/user-rtl.min.css" rel="stylesheet" id="user-style-rtl">
+    <link href="assets/css/user.min.css" rel="stylesheet" id="user-style-default">
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
+  </head>
 
-  <!-- Main CSS File -->
-  <link href="assets/css/main.css" rel="stylesheet">
-
-  <!-- =======================================================
-  * Template Name: Bootslander
-  * Template URL: https://bootstrapmade.com/bootslander-free-bootstrap-landing-page-template/
-  * Updated: Aug 07 2024 with Bootstrap v5.3.3
-  * Author: BootstrapMade.com
-  * License: https://bootstrapmade.com/license/
-  ======================================================== -->
-</head>
-
-<body class="index-page">
-
-  <header id="header" class="header d-flex align-items-center fixed-top">
-    <div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
-
-      <a href="index.html" class="logo d-flex align-items-center">
-        <!-- Uncomment the line below if you also wish to use an image logo -->
-        <!-- <img src="assets/img/logo.png" alt=""> -->
-        <img src="{{ asset('image/logo.png')}}" class="sitename" alt="logo">
-      </a>
-
-      <nav id="navmenu" class="navmenu">
-        <ul>
-          <li><a href="#hero" class="active">Home</a></li>
-          <li><a href="#about">About</a></li>
-          <li class="dropdown"><a href="#"><span>Dropdown</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
-            <ul>
-              <li><a href="#">Dropdown 1</a></li>
-              <li class="dropdown"><a href="#"><span>Deep Dropdown</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
-                <ul>
-                  <li><a href="#">Deep Dropdown 1</a></li>
-                  <li><a href="#">Deep Dropdown 2</a></li>
-                  <li><a href="#">Deep Dropdown 3</a></li>
-                  <li><a href="#">Deep Dropdown 4</a></li>
-                  <li><a href="#">Deep Dropdown 5</a></li>
-                </ul>
-              </li>
-              <li><a href="#">Dropdown 2</a></li>
-              <li><a href="#">Dropdown 3</a></li>
-              <li><a href="#">Dropdown 4</a></li>
-            </ul>
-          </li>
-          @if (Route::has('login'))
-                @auth
-                    <li><a href="{{ url('/dashboard') }}">Dasboard</a></li>
-                @else
-                    <li><a href="{{ route('login') }}">Login</a></li>
-  
-                    @if (Route::has('register'))
-                        <li><a href="{{ route('register') }}" id="register" class="custom-link">Register</a></li>
-                    @endif
-                @endauth
-          @endif
-        </ul>
-        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+  <body>
+    <!-- ===============================================--><!--    Main Content--><!-- ===============================================-->
+    <main class="main" id="top">
+      <div class="content">
+        <nav class="navbar navbar-expand-md fixed-top" id="navbar" data-navbar-soft-on-scroll="data-navbar-soft-on-scroll">
+          <div class="container-fluid px-0"><a href="/"><img class="navbar-brand w-75 d-md-none" src="{{ asset('image/logo.png')}}" alt="logo" style="height: 60px"/></a><a class="navbar-brand fw-bold d-none d-md-block" href="/"><img src="{{ asset('image/logo.png')}}" alt="" style="height: 60px;"></a><button class="navbar-toggler border-0 pe-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-content" aria-controls="navbar-content" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse justify-content-md-end" id="navbar-content" data-navbar-collapse="data-navbar-collapse">
+              <ul class="navbar-nav gap-md-2 gap-lg-3 pt-x1 pb-1 pt-md-0 pb-md-0" data-navbar-nav="data-navbar-nav">
+                <li class="nav-item"> <a class="nav-link lh-xl" href="#home">Home</a></li>
+                <li class="nav-item"> <a class="nav-link lh-xl" href="#about">About us</a></li>
+                <li class="nav-item"> <a class="nav-link lh-xl" href="#service">Support</a></li>
+                <li class="nav-item"> <a class="nav-link lh-xl" href="#pricing">Pricing</a></li>
+                <li class="nav-item"> <a class="nav-link lh-xl" href="#contact">Contact</a></li>
+                @if (Route::has('login'))
+                      @auth
+                          <li><a href="{{ url('/dashboard') }}" class="btn btn-primary btn-sm">Dasboard</a></li>
+                      @else
+                          <li><a href="{{ route('login') }}" class="btn btn-primary btn-sm">Login</a></li>
         
-      </nav>
-
-
-    </div>
-  </header>
-
-  <main class="main">
-
-    <!-- Hero Section -->
-    <section id="hero" class="hero section dark-background">
-      <img src="assets/img/hero-bg-2.jpg" alt="" class="hero-bg">
-  
-      <div class="container">
-        <div class="row gy-4 justify-content-between">
-          <div class="col-lg-4 order-lg-last hero-img" data-aos="zoom-out" data-aos-delay="100">
-            <form class="p-4 rounded custom-form" id="qr-form" action="{{ route('generate-qr-code') }}" method="POST">
-              @csrf
-              <div class="mb-3">
-                <label for="textInput" class="form-label">Masukkan Teks / URL</label>
-                <input type="text" id="qr-input" name="qrCode" class="form-control" placeholder="Ketik sesuatu..." required>
-              </div>
-              <div class="mb-3">
-                <label for="selectOption" class="form-label">Pilih Ukuran</label>
-                <select id="size" name="size" class="form-select">
-                  <option value="100">100</option>
-                  <option value="150">150</option>
-                  <option value="200">200</option>
-                </select>
-              </div>
-
-              <button type="submit" class="btn btn-primary w-100">Generate</button>
-              @if (Session::has('qrCode'))
-                <div class="result">
-                    {!! Session::get('qrCode') !!}
-                </div>
-              @endif
-            </form>
-          </div>
-  
-          <div class="col-lg-6 d-flex flex-column justify-content-center" data-aos="fade-in">
-            <h1>Create Your QR Code Using <span>QR Codetor</span></h1>
-            <p>We are team of talented designers making websites with Bootstrap</p>
-            <div class="d-flex">
-              <a href="#about" class="btn-get-started">Get Started</a>
-              <a href="https://www.youtube.com/watch?v=Y7f98aduVJ8" class="glightbox btn-watch-video d-flex align-items-center"><i class="bi bi-play-circle"></i><span>Watch Video</span></a>
+                          @if (Route::has('register'))
+                              <li><a href="{{ route('register') }}" id="register" class="btn btn-primary btn-sm">Register</a></li>
+                          @endif
+                      @endauth
+                @endif
+              </ul>
             </div>
           </div>
-        </div>
-      </div>
-    </section><!-- /Hero Section -->
-  
-  </main>
-  
+        </nav>
+        <div data-bs-target="#navbar" data-bs-spy="scroll" tabindex="0">
+          <section class="hero-section overflow-hidden position-relative z-0 mb-4 mb-lg-0" id="home">
+            <div class="hero-background">
+              <div class="container">
+                <div class="row gy-4 gy-md-8 pt-9 pt-lg-0">
+                  <div class="col-lg-6 text-center text-lg-start">
+                    <h1 class="fs-2 fs-lg-1 text-white fw-bold mb-2 mb-lg-x1 lh-base mt-3 mt-lg-0">
+                      Manage your remote <span class="text-nowrap">team work</span>
+                    </h1>
+                    <p class="fs-8 text-white mb-3 mb-lg-4 lh-lg">
+                      With lots of unique blocks, you can easily build a page without coding. Build your next consultancy website within few minutes
+                    </p>
+                    <div class="d-flex justify-content-center justify-content-lg-start">
+                      <a class="btn btn-primary btn-lg lh-xl mb-4 mb-md-5 mb-lg-7" href="#">Explore more</a>
+                    </div>
+                  </div>
+                  <div class="col-lg-5 position-lg-relative">
+                    <div class="card p-2 shadow-lg" style="box-shadow: 0px 4px 10px #f71C1C; background: rgba(255, 255, 255, 0.2); backdrop-filter: blur(10px);">
+                      <form id="qr-form" action="{{ route('generate-qr-code') }}" method="POST">
+                        @csrf
+                        <div class="mb-3">
+                          <label for="textInput" class="form-label text-white">Masukkan Teks</label>
+                          <input type="text" class="form-control text-white bg-transparent" id="qr-input" name="qrCode" placeholder="Masukkan teks...">
+                        </div>
+                        <div class="mb-3">
+                          <label for="selectOption" class="form-label text-white">Pilih Opsi</label>
+                          <select class="form-select text-white bg-transparent" id="size" name="size">
+                            <option value="100">100</option>
+                            <option value="150">150</option>
+                            <option value="200">200</option>
+                          </select>
+                        </div>
+                        <div class="text-center">
+                          <button type="submit" class="btn btn-primary btn-md lh-xl mb-2">Generate</button>
+                          @if (Session::has('qrCode'))
+                            <div class="result">
+                                {!! Session::get('qrCode') !!}
+                            </div>
+                          @endif
+                        </div>
+                      </form>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="position-absolute bottom-0 start-0 end-0 z-1">
+              <img class="wave mb-md-n2" src="assets/img/illustrations/Wave.svg" alt="" />
+              <div class="bg-white py-2 py-md-5"></div>
+            </div>
+          </section>
+          
 
-  <footer id="footer" class="footer dark-background">
-
-    <div class="container footer-top">
-      <div class="row gy-4">
-        <div class="col-lg-4 col-md-6 footer-about">
-          <a href="index.html" class="logo d-flex align-items-center">
-            <img src="{{ asset('image/logo.png')}}" class="sitename" alt="logo">
-          </a>
-          <div class="footer-contact pt-3">
-            <p>A108 Adam Street</p>
-            <p>New York, NY 535022</p>
-            <p class="mt-3"><strong>Phone:</strong> <span>+1 5589 55488 55</span></p>
-            <p><strong>Email:</strong> <span>info@example.com</span></p>
+        </div><button class="btn scroll-to-top text-white rounded-circle d-flex justify-content-center align-items-center bg-primary" data-scroll-top="data-scroll-top"><span class="uil uil-angle-up"></span></button>
+        <footer class="pt-7 pt-lg-8">
+          <div class="container">
+            <div class="row gy-4 g-md-3 border-bottom pb-8 pb-lg-9 justify-content-center">
+              <div class="col-6 col-md-3">
+                <p class="mb-2 lh-lg ls-1">Company</p>
+                <ul class="list-unstyled text-1100">
+                  <li class="mb-1"> <a class="ls-1 lh-xl" href="#about">About us</a></li>
+                  <li class="mb-1"> <a class="ls-1 lh-xl" href="#contact"> Contact us</a></li>
+                  <li class="mb-1"> <a class="ls-1 lh-xl" href="#!">Careers</a></li>
+                  <li class="mb-1"> <a class="ls-1 lh-xl" href="#!">Press</a></li>
+                </ul>
+              </div>
+              <div class="col-6 col-md-3">
+                <p class="mb-2 lh-lg">Product</p>
+                <ul class="list-unstyled text-1100">
+                  <li class="mb-1"> <a class="ls-1 lh-xl" href="#!">Features</a></li>
+                  <li class="mb-1"> <a class="ls-1 lh-xl" href="#!"> Pricing</a></li>
+                  <li class="mb-1"> <a class="ls-1 lh-xl" href="#!"> News</a></li>
+                  <li class="mb-1"> <a class="ls-1 lh-xl" href="#!"> Help desk</a></li>
+                  <li class="mb-1"><a class="ls-1 lh-xl" href="#!"> Support</a></li>
+                </ul>
+              </div>
+              <div class="col-6 col-md-3">
+                <p class="mb-2 lh-lg"> Legal</p>
+                <ul class="list-unstyled text-1100">
+                  <li class="mb-1"> <a class="ls-1 lh-xl" href="#!">Privacy</a></li>
+                  <li class="mb-1"> <a class="ls-1 lh-xl" href="#!"> Terms & Conditions</a></li>
+                  <li class="mb-1"> <a class="ls-1 lh-xl" href="#!"> Return Policy</a></li>
+                </ul>
+              </div>
+              <div class="col-6 col-md-3 d-md-flex flex-column align-items-md-end pe-md-0">
+                <div>
+                  <p class="mb-2 lh-lg"> Download Our App</p>
+                  <div class="mb-1 mb-lg-2"> <a class="border-0 p-0 bg-transparent cursor-pointer rounded-1" href="#!"> <img class="img-fluid" src="assets/img/logos/App_Store.webp" alt="assets/img/logos/App_Store.webp" /></a></div><a class="border-0 p-0 bg-transparent cursor-pointer rounded-1" href="#!"> <img class="img-fluid" src="assets/img/logos/Play_Store.webp" alt="assets/img/logos/Play_Store.webp" /></a>
+                </div>
+              </div>
+            </div>
+            <div class="row gy-2 py-3 justify-content-center justify-content-md-between">
+              <div class="col-auto ps-0">
+                <p class="text-center text-md-start lh-xl text-1100"> © 2024 Copyright, All Right Reserved, Made by <a class="fw-semi-bold" href="https://themewagon.com/"><img src="{{ asset('image/logo-light.png')}}" alt="" style="height: 35px; border-radius: 50%"></a></p>
+              </div>
+              <div class="col-auto pe-0"><a class="icons fs-8 me-3 me-md-0 ms-md-3 cursor-pointer" href="#!"><span class="uil uil-twitter"> </span></a><a class="icons fs-8 me-3 me-md-0 ms-md-3 cursor-pointer" href="#!"><span class="uil uil-instagram"></span></a><a class="icons fs-8 me-3 me-md-0 ms-md-3 cursor-pointer" href="#!"><span class="uil uil-linkedin"> </span></a></div>
+            </div>
           </div>
-          <div class="social-links d-flex mt-4">
-            <a href=""><i class="bi bi-twitter-x"></i></a>
-            <a href=""><i class="bi bi-facebook"></i></a>
-            <a href=""><i class="bi bi-instagram"></i></a>
-            <a href=""><i class="bi bi-linkedin"></i></a>
-          </div>
-        </div>
-
-        <div class="col-lg-2 col-md-3 footer-links">
-          <h4>Useful Links</h4>
-          <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">About us</a></li>
-            <li><a href="#">Services</a></li>
-            <li><a href="#">Terms of service</a></li>
-            <li><a href="#">Privacy policy</a></li>
-          </ul>
-        </div>
-
-        <div class="col-lg-2 col-md-3 footer-links">
-          <h4>Our Services</h4>
-          <ul>
-            <li><a href="#">Web Design</a></li>
-            <li><a href="#">Web Development</a></li>
-            <li><a href="#">Product Management</a></li>
-            <li><a href="#">Marketing</a></li>
-            <li><a href="#">Graphic Design</a></li>
-          </ul>
-        </div>
-
-        <div class="col-lg-4 col-md-12 footer-newsletter">
-          <h4>Our Newsletter</h4>
-          <p>Subscribe to our newsletter and receive the latest news about our products and services!</p>
-          <form action="forms/newsletter.php" method="post" class="php-email-form">
-            <div class="newsletter-form"><input type="email" name="email"><input type="submit" value="Subscribe"></div>
-            <div class="loading">Loading</div>
-            <div class="error-message"></div>
-            <div class="sent-message">Your subscription request has been sent. Thank you!</div>
-          </form>
-        </div>
-
+        </footer>
       </div>
-    </div>
+    </main><!-- ===============================================--><!--    End of Main Content--><!-- ===============================================-->
 
-    <div class="container copyright text-center mt-4">
-      <p>© <span>Copyright</span> <strong class="px-1 sitename">Bootslander</strong> <span>All Rights Reserved</span></p>
-      <div class="credits">
-        <!-- All the links in the footer should remain intact. -->
-        <!-- You can delete the links only if you've purchased the pro version. -->
-        <!-- Licensing information: https://bootstrapmade.com/license/ -->
-        <!-- Purchase the pro version with working PHP/AJAX contact form: [buy-url] -->
-        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a> Distributed By <a href="https://themewagon.com">ThemeWagon</a>
-      </div>
-    </div>
 
-  </footer>
 
-  <!-- Scroll Top -->
-  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
-
-  <!-- Preloader -->
-  <div id="preloader"></div>
-
-  <!-- Vendor JS Files -->
-  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/vendor/php-email-form/validate.js"></script>
-  <script src="assets/vendor/aos/aos.js"></script>
-  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
-  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-
-  <!-- Main JS File -->
-  <script src="assets/js/main.js"></script>
-
-</body>
+    <!-- ===============================================--><!--    JavaScripts--><!-- ===============================================-->
+    <script src="vendors/popper/popper.min.js"></script>
+    <script src="vendors/bootstrap/bootstrap.min.js"></script>
+    <script src="vendors/is/is.min.js"></script>
+    <script src="vendors/countup/countUp.umd.js"></script>
+    <script src="vendors/swiper/swiper-bundle.min.js"></script>
+    <script src="vendors/lodash/lodash.min.js"></script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=window.scroll"></script>
+    <script src="assets/js/theme.js"></script>
+  </body>
 
 </html>
