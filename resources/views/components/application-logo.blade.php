@@ -1,8 +1,12 @@
 <style>
-    img {
-        width: 80px;
-        border-radius: 50%;
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@900&display=swap');
+
+    h1 {
+        font-family: 'Poppins', sans-serif;
+        font-size: 2.5rem;
+        font-weight: 700;
+        margin: 0;
     }
 </style>
 
-<img src="{{ asset('image/logo-light.png')}}" alt="">
+<h1 class="sitename"><span style="color: #004aad;">W</span>ahyu<span style="color: #fad02c;">.</span> </h2>
