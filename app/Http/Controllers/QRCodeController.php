@@ -9,7 +9,7 @@ class QRCodeController extends Controller
 {
     public function index()
     {
-        $qrCode = QrCode::size(200)->margin(1)->generate('https://www.tutsmake.com');
-        return view('index', compact('qrCode'));
+        $qrCode = QrCode::size(200)->margin(1)->generate('https://example.com');
+        return view('home', compact('qrCode'));
     }
 }
