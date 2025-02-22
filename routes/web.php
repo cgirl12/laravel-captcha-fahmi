@@ -23,6 +23,9 @@ require __DIR__.'/auth.php';
 
 Route::get('/captcha-image', [CaptchaController::class, 'getCaptchaImage'])->name('captcha.image');
 
-Route::get('/', [QRCodeController::class, 'index']);
+Route::controller(QRCodeController::class)->group(function () {
+    Route::get('/qrcode', [QRCodeController::class, 'index']);
+    Route::post('generate-qr-code', 'generateQrCode')->name('generate-qr-code');
+});
 // Route::get('/captcha', [CaptchaController::class, 'generateCaptcha'])->name('captcha.generate');
 // Route::post('/validate-captcha', [CaptchaController::class, 'validateCaptcha'])->name('captcha.validate');
