@@ -39,13 +39,13 @@ Laravel is accessible, powerful, and provides tools required for large, robust a
 Clone the project using the following command:
 
 ```sh
-git clone https://github.com/cgirl12/laravel-captcha-sella.git
+git clone https://github.com/cgirl12/laravel-captcha-fahmi.git
 ```
 
 ### 2. Navigate to Project Directory
 
 ```sh
-cd laravel-captcha-sella
+cd laravel-captcha-fahmi
 ```
 
 ### 3. Install Dependencies
@@ -93,13 +93,3 @@ npm run dev
 The application will be available at `http://127.0.0.1:8000/`.
 
 ---
-
-## 🚀Preview
-
-![Screenshot 2025-02-17 092026](https://github.com/user-attachments/assets/c9af7d62-d35f-46be-a0e6-d08a132df7f1)
-
-![Screenshot 2025-02-17 092418](https://github.com/user-attachments/assets/c01a213c-5f92-4d4e-964a-f10575d25c97)
-
-![Screenshot 2025-02-17 093147](https://github.com/user-attachments/assets/e23c3ead-aadb-4961-92c7-f2e4d5e27e51)
-
-![Screenshot 2025-02-17 093241](https://github.com/user-attachments/assets/b547d5a5-5fc2-4bd2-b074-e782edd949a4)
